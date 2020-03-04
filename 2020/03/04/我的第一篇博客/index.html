@@ -320,27 +320,30 @@
   
 
   
-
-
-
   
-  <div id="gitment-ctn"></div> 
 
-<link rel="stylesheet" href="https://jjeejj.github.io/css/gitment.css">
-<script src="https://www.wenjunjiang.win/js/gitment.js"></script>
+  <div id="gitalk-container" style="padding: 0px 30px 0px 30px;"></div> 
 
-<script>
-var gitment = new Gitment({
-  id: "http://yoursite.com/2020/03/04/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/",
-  owner: 'melo-1',
-  repo: 'melo-1.github.io',
-  oauth: {
-    client_id: 'e563b6dbbcf145576756',
-    client_secret: '09a86e89a5a1f598ce529c00bf1733dfd47a32b1',
-  },
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+
+if(true){
+	var gitalk = new Gitalk({
+  	clientID: '',
+  	clientSecret: '',
+  	repo: 'melo-1.github.io',
+  	owner: 'melo-1',
+  	admin: ['melo-1'],
+  	id: 'Wed Mar 04 2020 13:36:12 GMT+0800',
+  	distractionFreeMode: ''
 })
-gitment.render('gitment-ctn')
+gitalk.render('gitalk-container') 
+}
 </script>
+  
+
+
   
 
 
