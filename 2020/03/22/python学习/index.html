@@ -7,18 +7,25 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://melo-1.github.io">
-  <title>Tag: 菜鸟上路，注意安全！ | Welcome to melo&#39;s blog!</title>
+  <title>python实战爬虫有道翻译与解决有道翻译反爬虫问题 | Welcome to melo&#39;s blog!</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="个人技术生活博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Welcome to melo&#39;s blog!">
-<meta property="og:url" content="https://melo-1.github.io/tags/%E8%8F%9C%E9%B8%9F%E4%B8%8A%E8%B7%AF%EF%BC%8C%E6%B3%A8%E6%84%8F%E5%AE%89%E5%85%A8%EF%BC%81/index.html">
+  <meta name="description" content="最近在学Python，一直没有尝试过实战。于是昨天试了试爬虫初学者的第一战场：有道翻译。与教程中不一样的是现在的有道翻译有了反爬虫机制，最后通过查询百度与借鉴其他人的博客实现~">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python实战爬虫有道翻译与解决有道翻译反爬虫问题">
+<meta property="og:url" content="https://melo-1.github.io/2020/03/22/python%E5%AD%A6%E4%B9%A0/index.html">
 <meta property="og:site_name" content="Welcome to melo&#39;s blog!">
-<meta property="og:description" content="个人技术生活博客">
+<meta property="og:description" content="最近在学Python，一直没有尝试过实战。于是昨天试了试爬虫初学者的第一战场：有道翻译。与教程中不一样的是现在的有道翻译有了反爬虫机制，最后通过查询百度与借鉴其他人的博客实现~">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://melo-1.github.io/images/o.png">
+<meta property="og:image" content="https://melo-1.github.io/images/p.png">
+<meta property="og:image" content="https://melo-1.github.io/images/r.png">
+<meta property="article:published_time" content="2020-03-22T12:21:12.000Z">
+<meta property="article:modified_time" content="2020-03-22T14:45:12.060Z">
 <meta property="article:author" content="Melo_1&#x2F;汪">
-<meta property="article:tag" content="菜鸟上路">
+<meta property="article:tag" content="随笔">
+<meta property="article:tag" content="Python学习">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://melo-1.github.io/images/o.png">
   
     <link rel="alternative" href="/atom.xml" title="Welcome to melo&#39;s blog!" type="application/atom+xml">
   
@@ -156,39 +163,90 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
+            <article id="post-python学习" class="article article-type-post " itemscope itemprop="blogPost">
 
-
-<a href="/2020/03/04/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
-  	<time datetime="2020-03-04T05:36:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-04</time>
-</a>
-        </div>
-    	 
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/04/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">我的第一篇博客</a>
+    <h1 class="article-title" itemprop="name">
+      python实战爬虫有道翻译与解决有道翻译反爬虫问题
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        
+        <!-- 不蒜子统计 -->
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+
+
+<a href="/2020/03/22/python%E5%AD%A6%E4%B9%A0/" class="archive-article-date">
+  	<time datetime="2020-03-22T12:21:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-22</time>
+</a>
+        
+</header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h2><p>&nbsp; &nbsp; 不需要打开有道翻译网页就能在本地使用，还是很方便的。所以学习爬虫确实还是一个比较有意思且实用的过程，另一方面，现在的网站或多或少都有反爬机制，这样斗智斗勇的感觉也挺有趣的。<br>&nbsp; &nbsp; 当然反爬机制也让我更明白了Python爬虫还需要再多多学习，毕竟有道的反爬机制对于我这个初学者来说都不太简单那其他更加复杂的网站的反爬机制将会更有挑战性~</p>
+<a id="more"></a>
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=28445614&auto=0&height=66"></iframe>
+
+<hr>
+<h2 id="爬有道翻译："><a href="#爬有道翻译：" class="headerlink" title="爬有道翻译："></a>爬有道翻译：</h2><p>&nbsp; &nbsp; 首先我们需要实地考察有道翻译,并点击红框中内容~<br><img src="/images/o.png" alt="o"></p>
+<p>&nbsp; &nbsp; 可以看到右边出现的为Request Method：POST，且在Data栏中可以看到i:后接的是待翻译内容，再看看Preview中就有翻译过来的内容，可知我们需要找的POST内容就是这个了。接下来就是可以准备写代码了，具体的内容介绍在代码注释中可见:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">import urllib.request</span><br><span class="line">import urllib.parse</span><br><span class="line">import json</span><br><span class="line">#引入需要的模块</span><br><span class="line"></span><br><span class="line">url&#x3D; &#39;http:&#x2F;&#x2F;fanyi.youdao.com&#x2F;translate_o?smartresult&#x3D;dict&amp;smartresult&#x3D;rule&#39;</span><br><span class="line">#需要打开网页的链接，这个在Request URL栏</span><br><span class="line">while True:</span><br><span class="line">    content &#x3D; input(&quot;请输入你想要翻译的内容~\n&quot;)</span><br><span class="line">    head &#x3D; &#123;&#125;</span><br><span class="line">    head[&#39;User-Agent&#39;] &#x3D; &#39;Mozilla&#x2F;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit&#x2F;537.36 (KHTML, like Gecko) Chrome&#x2F;80.0.3987.122 Safari&#x2F;537.36&#39;</span><br><span class="line">    #模拟浏览器访问，简单的防止反爬机制。这个在Request Headers中的User-Agent栏。</span><br><span class="line">    data &#x3D; &#123;&#125;</span><br><span class="line">    data[&#39;i&#39;] &#x3D; content</span><br><span class="line">    data[&#39;from&#39;] &#x3D; &#39;AUTO&#39;</span><br><span class="line">    data[&#39;to&#39;] &#x3D; &#39;AUTO&#39;</span><br><span class="line">    data[&#39;smartresult&#39;] &#x3D; &#39;dict&#39;</span><br><span class="line">    data[&#39;client&#39;] &#x3D; &#39;fanyideskweb&#39;</span><br><span class="line">    data[&#39;salt&#39;] &#x3D; &#39;15847864360501&#39;</span><br><span class="line">    data[&#39;sign&#39;] &#x3D; &#39;f762faa6901c6cf473fce719f8238ca8&#39;</span><br><span class="line">    data[&#39;ts&#39;] &#x3D; &#39;1584786436050&#39;</span><br><span class="line">    data[&#39;bv&#39;] &#x3D; &#39;0ed2e07b89acaa1301d499442c9fdf79&#39;</span><br><span class="line">    data[&#39;doctype&#39;] &#x3D; &#39;json&#39;</span><br><span class="line">    data[&#39;version&#39;] &#x3D; &#39;2.1&#39;</span><br><span class="line">    data[&#39;keyfrom&#39;] &#x3D; &#39;fanyi.web&#39;</span><br><span class="line">    data[&#39;action&#39;] &#x3D; &#39;FY_BY_REALTlME&#39;</span><br><span class="line">    #将Form Data数据存入data字典中。</span><br><span class="line">    data &#x3D; urllib.parse.urlencode(data).encode(&#39;utf-8&#39;)</span><br><span class="line">    #将data以utf-8的形式编码</span><br><span class="line">    req &#x3D; urllib.request.Request(url,data,head)</span><br><span class="line">    #以代码中的data与head形式访问代码中的url链接</span><br><span class="line">    response &#x3D; urllib.request.urlopen(req)</span><br><span class="line">    #打开url网页并传送data与head</span><br><span class="line">    html &#x3D; response.read().decode(&#39;utf-8&#39;)</span><br><span class="line">    #读取打开的网页并进行utf-8解码</span><br><span class="line">    target &#x3D; json.loads(html)</span><br><span class="line">    #识别json</span><br><span class="line">    print(html)</span><br><span class="line">    #print(&quot;翻译的结果是:%s&quot;%(target[&#39;translateResult&#39;][0][0][&#39;tgt&#39;]))</span><br><span class="line">    print(&quot;********************************************************&quot;)</span><br><span class="line">    #输出结果</span><br></pre></td></tr></table></figure>
+<p>&nbsp; &nbsp; 大家执行完代码后会发现报错：{“errorCode”:50}，其实代码是没有问题的，只是有道加入了反爬机制。所以接下来需要做的是如何反反爬机制。</p>
+<hr>
+<p>##解决有道翻译的反爬机制<br>&nbsp; &nbsp; 解决方案一：可以在上述的代码中将<br>url= <a href="http://fanyi.youdao.com/translate_o?smartresult=dict&amp;smartresult=rule" target="_blank" rel="noopener">http://fanyi.youdao.com/translate_o?smartresult=dict&amp;smartresult=rule</a> 中的_o去除，即解除网页反爬虫机制。（其实是解除了salt、sign参数的作用） </p>
+<p>&nbsp; &nbsp; 解决方案二：依旧需要实地考察有道网站，我们多次尝试翻译。可以发现在Data数据中变化的是salt、sign和ts。可以猜测实现反爬机制的关键就在这三个加密的参数~接下来先介绍这三个参数的作用：<br>1、salt:加密信息，根据数据的特点可以猜测与时间戳有关<br>2、sign:签名字符串<br>3、ts:毫秒时间戳<br><img src="/images/p.png" alt="p"> </p>
+<p>&nbsp; &nbsp; 再稍微介绍一下其他数据的功能：<br>1、i:待翻译内容<br>2、from:源语言的语种（这里是AUTO，即可以进行多语言互译不局限于英汉互译）<br>3、to:翻译后的语种（AUTO同上）<br>4、smartresult: 固定值<br>5、client:客户端<br>6、bv:md5值<br>7、doctype:文档类型<br>8、version:版本<br>9、keyfrom：键来源<br>10、action:操作动作<br>11、typoResult:打印错误 </p>
+<p>&nbsp; &nbsp; 开始分析sign、salt和ts具体获取方式。先去网页的源代码中查看，并没有此参数，于是考虑是否在js文件中生成这三个参数。最后在fanyi.min.js文件中找了这三个结果。当然js文件的内容格式比较可怕，建议将其格式化后再用sublimetext进行查找salt参数。接下来可见代码片段： </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">var r &#x3D; function(e) &#123;</span><br><span class="line">    var t &#x3D; n.md5(navigator.appVersion),</span><br><span class="line">        r &#x3D; &quot;&quot; + (new Date).getTime(),</span><br><span class="line">        i &#x3D; r + parseInt(10 * Math.random(), 10);</span><br><span class="line">    return &#123;</span><br><span class="line">        ts: r,</span><br><span class="line">        bv: t,</span><br><span class="line">        salt: i,</span><br><span class="line">        sign: n.md5(&quot;fanyideskweb&quot; + e + i + &quot;Nw(nmmbP%A-r6U3EUn]Aj&quot;)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">t.recordUpdate &#x3D; function(e) &#123;</span><br><span class="line">    var t &#x3D; e.i,</span><br><span class="line">        i &#x3D; r(t);</span><br><span class="line">    n.ajax(&#123;</span><br><span class="line">        type: &quot;POST&quot;,</span><br><span class="line">        contentType: &quot;application&#x2F;x-www-form-urlencoded; charset&#x3D;UTF-8&quot;,</span><br><span class="line">        url: &quot;&#x2F;bettertranslation&quot;,</span><br><span class="line">        data: &#123;</span><br><span class="line">            i: e.i,</span><br><span class="line">            client: &quot;fanyideskweb&quot;,</span><br><span class="line">            salt: i.salt,</span><br><span class="line">            sign: i.sign,</span><br><span class="line">            ts: i.ts,</span><br><span class="line">            bv: i.bv,</span><br><span class="line">            tgt: e.tgt,</span><br><span class="line">            modifiedTgt: e.modifiedTgt,</span><br><span class="line">            from: e.from,</span><br><span class="line">            to: e.to</span><br><span class="line">        &#125;,</span><br><span class="line">        success: function(e) &#123;&#125;,</span><br><span class="line">        error: function(e) &#123;&#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>&nbsp; &nbsp; 从上述js代码中可见salt的获取方式，可知确实为时间戳：<br>&nbsp; &nbsp; i = r + parseInt(10 * Math.random(), 10)<br>&nbsp; &nbsp; 其中r为ts获取方式：<br>&nbsp; &nbsp; r = “” + (new Date).getTime()<br>&nbsp; &nbsp; sign的获取方式为：<br>&nbsp; &nbsp; sign = n.md5(“fanyideskweb” + e + i + “Nw(nmmbP%A-r6U3EUn]Aj”)<br>&nbsp; &nbsp; 其中前后两个为固定值，只有e与i在改变。e为待翻译内容，i为salt。 </p>
+<p>&nbsp; &nbsp; 弄明白了以上三个参数的来源，接下来可以开始动手写代码。  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">import random</span><br><span class="line">import time</span><br><span class="line">import requests</span><br><span class="line">import hashlib</span><br><span class="line">import json</span><br><span class="line"> </span><br><span class="line">def generateSaltSign(e):</span><br><span class="line">    navigator_appVersion &#x3D; &quot;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit&#x2F;537.36 (KHTML, like Gecko) Chrome&#x2F;74.0.3729.169 Safari&#x2F;537.36&quot;</span><br><span class="line">    t &#x3D; hashlib.md5(navigator_appVersion.encode(&quot;utf-8&quot;)).hexdigest()</span><br><span class="line">    r &#x3D; str(int(time.time()*1000))</span><br><span class="line">    i &#x3D; r + str(random.randint(1,10))</span><br><span class="line">    return &#123;</span><br><span class="line">        &quot;ts&quot;: r,</span><br><span class="line">        &quot;bv&quot;: t,</span><br><span class="line">        &quot;salt&quot;: i,</span><br><span class="line">        &quot;sign&quot;: hashlib.md5(str(&quot;fanyideskweb&quot; + e + i + &quot;97_3(jkMYg@T[KZQmqjTK&quot;).encode(&quot;utf-8&quot;)).hexdigest()</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">def spider(i):</span><br><span class="line">    url &#x3D; &#39;http:&#x2F;&#x2F;fanyi.youdao.com&#x2F;translate_o?smartresult&#x3D;dict&amp;smartresult&#x3D;rule&#39;</span><br><span class="line">    r &#x3D; generateSaltSign(i)</span><br><span class="line"> </span><br><span class="line">    data &#x3D; &#123;</span><br><span class="line">        &quot;i&quot;: i,</span><br><span class="line">        &quot;from&quot;: &quot;AUTO&quot;,</span><br><span class="line">        &quot;to&quot;: &quot;AUTO&quot;,</span><br><span class="line">        &quot;smartresult&quot;: &quot;dict&quot;,</span><br><span class="line">        &quot;client&quot;: &quot;fanyideskweb&quot;,</span><br><span class="line">        &quot;salt&quot;: r[&quot;salt&quot;],</span><br><span class="line">        &quot;sign&quot;: r[&quot;sign&quot;],</span><br><span class="line">        &quot;ts&quot;: r[&quot;ts&quot;],</span><br><span class="line">        &quot;bv&quot;: r[&quot;bv&quot;],</span><br><span class="line">        &quot;doctype&quot;: &quot;json&quot;,</span><br><span class="line">        &quot;version&quot;: &quot;2.1&quot;,</span><br><span class="line">        &quot;keyfrom&quot;: &quot;fanyi.web&quot;,</span><br><span class="line">        &quot;action&quot;: &quot;FY_BY_REALTlME&quot;,</span><br><span class="line">    &#125;</span><br><span class="line">     #data &#x3D; parse.urlencode(data).encode(&#39;utf-8&#39;)</span><br><span class="line"> </span><br><span class="line">    headers &#x3D; &#123;</span><br><span class="line">        &quot;Cookie&quot;: &quot;OUTFOX_SEARCH_USER_ID&#x3D;-286220249@10.108.160.17;&quot;,</span><br><span class="line">        &quot;Referer&quot;: &quot;http:&#x2F;&#x2F;fanyi.youdao.com&#x2F;&quot;,</span><br><span class="line">        &quot;User-Agent&quot;: &quot;Mozilla&#x2F;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit&#x2F;537.36 (KHTML, like Gecko) Chrome&#x2F;74.0.3729.169 Safari&#x2F;537.36&quot;,</span><br><span class="line">    &#125;</span><br><span class="line">    response &#x3D; requests.post(url&#x3D;url, data&#x3D;data, headers&#x3D;headers)</span><br><span class="line">    html &#x3D; response.text</span><br><span class="line">    target &#x3D; json.loads(html)</span><br><span class="line">    print(&quot;翻译的结果是:%s&quot;%(target[&#39;translateResult&#39;][0][0][&#39;tgt&#39;]))</span><br><span class="line">    print(&quot;********************************************************&quot;)</span><br><span class="line">    #print(html)</span><br><span class="line"> </span><br><span class="line">if __name__ &#x3D;&#x3D; &#39;__main__&#39;:</span><br><span class="line">    while True:</span><br><span class="line">        i &#x3D; input(&quot;请输入你想要翻译的内容~\n&quot;)</span><br><span class="line">        spider(i)</span><br></pre></td></tr></table></figure>
+<h2 id="代码解读"><a href="#代码解读" class="headerlink" title="代码解读"></a>代码解读</h2><p>&nbsp; &nbsp; 1、第一个函数根据js文件模仿网页生成salt、sign和ts参数。<br>&nbsp; &nbsp; 2、第二个函数是开始准备爬虫的请求函数，这里有两个关键的内容。data与headers。一个是需要发送给网站信息，一个是请求头文件。模拟浏览器正常访问。<br>&nbsp; &nbsp; 最后展示一个成功运行结果图。<br><img src="/images/r.png" alt="r"> </p>
+<hr>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>&nbsp; &nbsp; 最近在开始学习Python，所以这一周没有打理博客了。现在慢慢准备上手一些爬虫的实例。如果好玩的话会继续分享，也算是见证自己的成长~<br>&nbsp; &nbsp; 谢谢大家观看，因为是Python初学者所以或多或少会有错误，如果博客中有表达问题还请在评论中指正！</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/melo-1/melo-1.github.io@master/asset/zhifu.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -198,25 +256,148 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">菜鸟上路，注意安全！</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Python学习</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://melo-1.github.io/2020/03/22/python%E5%AD%A6%E4%B9%A0/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2020/03/13/%E5%8A%A0%E5%BF%ABWIFI%E9%80%9F%E5%BA%A6/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">如何加快家里WIFI速度的方法</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
+   
+
+
+  
   
 
-    
+  
+
+  
+
+
+  
+
+
+
+   
+       <section id="comments" class="comments">
+         <style>
+           .comments{margin:30px;padding:10px;background:#fff}
+           @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
+         </style>
+         <div id="vcomment" class="comment"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script src="https://cdnjs.loli.net/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var notify = 'true' == true ? true : false;
+  var verify = 'false' == true ? true : false;
+  new Valine({
+    av: AV,
+    el: '#vcomment',
+    notify: notify,
+    app_id: "nFapKlcY1azzPP8GAuf3wwRB-gzGzoHsz",
+    app_key: "TeufgB1MBK7bl7jrnCt5sMdA",
+    placeholder: "无需输入昵称、邮箱和网址信息即可快速评论~（建议输入昵称、邮箱方便交流哦！）",
+    avatar: "wavatar",
+    avatar_cdn:'{{ theme.valine.avatar_cdn }}',
+  });
+</script>
+
+     </section>
+   
+
 
 
           </div>
@@ -247,9 +428,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
